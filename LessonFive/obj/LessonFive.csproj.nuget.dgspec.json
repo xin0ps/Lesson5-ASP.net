@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ROG\\source\\repos\\LessonFive\\LessonFive\\LessonFive.csproj": {}
+    "C:\\Users\\ROG\\Desktop\\Lesson5-ASP.net\\LessonFive\\LessonFive.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ROG\\source\\repos\\LessonFive\\LessonFive\\LessonFive.csproj": {
+    "C:\\Users\\ROG\\Desktop\\Lesson5-ASP.net\\LessonFive\\LessonFive.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROG\\source\\repos\\LessonFive\\LessonFive\\LessonFive.csproj",
+        "projectUniqueName": "C:\\Users\\ROG\\Desktop\\Lesson5-ASP.net\\LessonFive\\LessonFive.csproj",
         "projectName": "LessonFive",
-        "projectPath": "C:\\Users\\ROG\\source\\repos\\LessonFive\\LessonFive\\LessonFive.csproj",
+        "projectPath": "C:\\Users\\ROG\\Desktop\\Lesson5-ASP.net\\LessonFive\\LessonFive.csproj",
         "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROG\\source\\repos\\LessonFive\\LessonFive\\obj\\",
+        "outputPath": "C:\\Users\\ROG\\Desktop\\Lesson5-ASP.net\\LessonFive\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ROG\\AppData\\Roaming\\NuGet\\NuGet.Config",
