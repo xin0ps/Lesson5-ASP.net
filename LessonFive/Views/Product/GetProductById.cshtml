@@ -1,0 +1,40 @@
+﻿@model LessonFive.Models.Product
+
+@{
+    ViewData["Title"] = "GetProductById";
+}
+
+
+<!DOCTYPE html>
+
+
+<form  method="post">
+    <div class="form-group">
+        <label asp-for="Id" class="control-label"></label>
+        <input asp-for="Id" id="idInput" class="form-control" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+</form>
+
+<h2>Product:</h2>
+<div id="productList"></div>
+
+@section Scripts {
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("idInput").addEventListener("input", function () {
+                var id = parseInt(this.value);
+                if (id > 0) {
+                    fetch(`@Url.Action("GetProductById", "Product")?id=${id}`)
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById("productList").innerHTML = data;
+                        })
+                        .catch(error => console.error('Error:', error));
+                }
+            });
+        });
+
+    </script>
+}

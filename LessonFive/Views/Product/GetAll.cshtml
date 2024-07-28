@@ -1,0 +1,38 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Products</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <p>Product Count: @Model.Count</p>
+    <table>
+        <thead>
+            <tr class="gap-4">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Quantity</td>
+                    <td>@product.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

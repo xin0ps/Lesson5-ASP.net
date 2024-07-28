@@ -1,0 +1,44 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Remove Product";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Products</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <p>Product Count: @Model.Count</p>
+    <table>
+        <thead>
+            <tr class="gap-4">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Id
+                    </td>
+                    <td>@product.Name</td>
+                    <td>@product.Quantity</td>
+                    <td>@product.Price</td>
+                   <td> <form asp-action="Remove" method="post">
+                        <input type="hidden" name="Id" value="@product.Id" />
+                        <button type="submit">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

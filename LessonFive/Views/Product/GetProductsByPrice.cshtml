@@ -1,0 +1,41 @@
+﻿@model LessonFive.Models.Product
+
+@{
+    ViewData["Title"] = "GetProductByPrice";
+}
+
+
+<!DOCTYPE html>
+
+
+
+<form  method="post">
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price"  id="priceInput" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+</form>
+
+<h2>Products :</h2>
+<div id="productList"></div>
+
+@section Scripts {
+    <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("priceInput").addEventListener("input", function () {
+                    var price = parseFloat(this.value);
+                    if (price > 0) {
+                        fetch(`@Url.Action("GetProductsByPrice", "Product")?price=${price}`)
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById("productList").innerHTML = data;
+                            })
+                            .catch(error => console.error('Error:', error));
+                    }
+                });
+            });
+        
+    </script>
+}
